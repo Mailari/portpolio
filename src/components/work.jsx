@@ -1,35 +1,36 @@
 import React from "react";
 
 export default function Work() {
-  const skills = [
-    "React",
-    "HTML",
-    "CSS",
-    "Javascript",
-    "Typescript",
-    "Nodejs",
-    "MongoDB",
-    "Postgres",
-    "Redis",
-    "Flutter",
-    "Dart",
-    "Training",
-  ].map((s) => {
-    return (
-      <div className="bg-[#7e7d7d91] mx-2 my-4  w-[18vh] h-10 rounded-[3vw] text-center  ">
-        <p className="py-2">{s}</p>
-      </div>
-    );
-  });
-
   return (
-    <div className=" mx-25 text-center flex flex-col ">
-      <h1 className="text-[4.5vh] font-medium w-[45vw] self-center">
-        Mailari Hulihond is Full-Stack Developer from Banglore
-      </h1>
-      <br />
-      <div className="flex w-[60%] flex-row flex-wrap  self-center justify-left">
-        {skills}
+    <div className="mt-[10vh] mx-[20%] flex flex-row">
+      <div className="w-[35%] border-8">
+        <h2>p1</h2>
+        <h2>p2</h2>
+        <h2>p3</h2>
+        <h2>p4</h2>
+        <h2>p5</h2>
+        <h2>p6</h2>
+      </div>
+
+      <div className="flex flex-col">
+        <h1 id="1" className="my-[10vh]">
+          Project 1
+        </h1>
+        <h1 id="2" className="my-[10vh]">
+          Project 2
+        </h1>
+        <h1 id="3" className="my-[10vh]">
+          Project 3
+        </h1>
+        <h1 id="4" className="my-[10vh]">
+          Project 4
+        </h1>
+        <h1 id="5" className="my-[10vh]">
+          Project 5
+        </h1>
+        <h1 id="6" className="my-[10vh]">
+          Project 6
+        </h1>
       </div>
     </div>
   );

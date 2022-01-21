@@ -1,9 +1,9 @@
 import "./App.css";
 import Nav from "./components/nav";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import About from "./components/about";
 import Work from "./components/work";
-import Resume from "./components/resume";
+import Blog from "./components/blog";
 import { useEffect, useState } from "react";
 function App() {
   const [theme, setTheme] = useState(
@@ -29,15 +29,17 @@ function App() {
   };
 
   return (
-    <BrowserRouter>
-      <Nav changeTheme={onThemeChange} />
-      {theme}
-      <Routes>
-        <Route path="/" element={Work()}></Route>
-        <Route path="/about" element={About()}></Route>
-        <Route path="/resume" element={Resume()}></Route>
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route
+        path="/"
+        element={<Nav changeTheme={onThemeChange} color={theme} />}
+      >
+        <Route path="" element={About()}></Route>
+        <Route path="work" element={Work()}></Route>
+        <Route path="blog" element={Blog()}></Route>
+        <Route path="*" element={<div>404 Page not Found</div>}></Route>
+      </Route>
+    </Routes>
   );
 }
 
