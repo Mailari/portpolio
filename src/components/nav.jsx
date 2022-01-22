@@ -6,9 +6,8 @@ export default function Nav(props) {
   return (
     <div>
       <div
-        className={`bg-${
-          props.color ? "white" : "black"
-        } sticky overflow-hidden top-0 flex h-[80px] flex-row md:px-[20%] list-none px-[10vw] justify-between shadow-sm`}
+        style={{ backgroundColor: props.color ? "white" : "black" }}
+        className="sticky overflow-hidden top-0 flex h-[80px] flex-row md:px-[20%] list-none px-[10vw] justify-between shadow-sm"
       >
         <h1 className="self-center md:text-2xl text-sm font-extrabold">
           Mailari Hulihond
